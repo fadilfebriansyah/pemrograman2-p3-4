@@ -12,8 +12,7 @@ namespace P3_4_1204029
 {
     public partial class Form1 : Form
     {
-        private string jadwal = "";
-        private string kelas = "";
+
 
         public Form1()
         {
@@ -22,18 +21,9 @@ namespace P3_4_1204029
 
         private void btTampilkan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show
-                    ("Nama : " + txtNama.Text +
-                    "\nJenis Kelamin : " + cbJk.Text +
-                    "\nTanggal Lahir : " + dtTglLahir.Text +
-                    "\nPilihan Kelas : " + kelas +
-                    "\nPilihan Jadwal : " + jadwal,
-                    "Informasi Pendaftaran",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+            string kelas = " ";
+            string jadwal = " ";
 
-        private void gbJadwal_Enter(object sender, EventArgs e)
-        {
             if (rbJadwal1.Checked)
             {
                 jadwal = "Senin & Rabu, 14.00 - 16.00";
@@ -50,25 +40,22 @@ namespace P3_4_1204029
             {
                 jadwal = "Minggu, 13.00 - 17.00";
             }
-        }
 
-        private void gbKelas_Enter(object sender, EventArgs e)
-        {
             if (cbBiola.Checked)
             {
-                kelas = kelas + "Biola , ";
+                kelas = kelas + "Biola  ";
             }
             if (cbDrum.Checked)
             {
-                kelas = kelas + "Drum , ";
+                kelas = kelas + "Drum  ";
             }
             if (cbGitar.Checked)
             {
-                kelas = kelas + "Gitar , ";
+                kelas = kelas + "Gitar  ";
             }
             if (cbKomposer.Checked)
             {
-                kelas = kelas + "Komposer , ";
+                kelas = kelas + "Komposer  ";
             }
             if (cbKonduktor.Checked)
             {
@@ -91,6 +78,15 @@ namespace P3_4_1204029
                 MessageBox.Show("Harus memilih salah satu dari pilihan kelas", "Warning!",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            MessageBox.Show
+                    ("Nama : " + txtNama.Text +
+                    "\nJenis Kelamin : " + cbJk.Text +
+                    "\nTanggal Lahir : " + dtTglLahir.Text +
+                    "\nPilihan Kelas : " + kelas +
+                    "\nPilihan Jadwal : " + jadwal,
+                    "Informasi Pendaftaran",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btSelesai_Click(object sender, EventArgs e)
@@ -99,3 +95,4 @@ namespace P3_4_1204029
         }
     }
 }
+       

@@ -121,11 +121,14 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(250, 9);
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(188, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 13);
+            this.label4.Size = new System.Drawing.Size(223, 21);
             this.label4.TabIndex = 17;
             this.label4.Text = "FORM PENDAFTARARAN";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btTampilkan
             // 
@@ -149,7 +152,6 @@
             this.gbJadwal.TabIndex = 12;
             this.gbJadwal.TabStop = false;
             this.gbJadwal.Text = "Pilihan Jadwal";
-            this.gbJadwal.Enter += new System.EventHandler(this.gbJadwal_Enter);
             // 
             // rbJadwal1
             // 
@@ -211,7 +213,6 @@
             this.gbKelas.TabIndex = 10;
             this.gbKelas.TabStop = false;
             this.gbKelas.Text = "Pilihan Kelas ";
-            this.gbKelas.Enter += new System.EventHandler(this.gbKelas_Enter);
             // 
             // cbKomposer
             // 
